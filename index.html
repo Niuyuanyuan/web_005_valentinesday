@@ -4,9 +4,17 @@
   <meta charset="UTF-8">
   <title>滑上收起</title>
   <style>
+    body{
+      margin:0;
+    }
+    .content{
+      width: 804px;
+      margin: 0 auto;
+    }
     h1{
       padding:10px;
       color:#fc8cf8;
+      text-align: center;
     }
     .box-big{
       margin:50px;
@@ -33,66 +41,84 @@
       bottom:0;
       right:0;
     }
+    .clearfix:before, .clearfix:after {
+      content: '\20';
+      display: table;
+      height: 0;
+      overflow: hidden; 
+    }
+    .clearfix:after {
+      clear: both; 
+    }
+    @media (max-width: 900px) {
+      .content{
+        width: 402px;
+      }
+    }
+    @media (max-width: 1700px) {
+      .content{
+        width: 804px;
+      }
+    }
   </style>
 </head>
 <body>
-<h1>蔺哈哈老师，以下是牛媛今天的作业完成情况
-2017年02月14日</h1>
-  <div class="box-big box-big-1">
-    <h4 class="box-1">
-      蔺哈哈，我爱你！今天我们在一起440天，度过第二个情人节。
-    </h4>
-    <div class="box-2">1</div>
+  <div class="content clearfix">
+    <h1>蔺哈哈老师，以下是牛媛今天的作业完成情况<br>2017年02月14日</h1>
+    <div class="box-big box-big-1">
+      <h4 class="box-1">
+        蔺哈哈，我爱你！今天我们在一起440天，度过第二个情人节。
+      </h4>
+      <div class="box-2">1</div>
+    </div>
+
+    <div class="box-big box-big-2">
+      <h4 class="box-1">
+        今天是2017年2月14日情人节，今天抽奖本想抽到一个回家送你，结果宝宝幸运的抽到null
+      </h4>
+      <div class="box-2">2</div>
+    </div>
+
+    <div class="box-big box-big-3">
+      <h4 class="box-1">
+        许下一个愿望，希望明年有属于我们的家。拿到一个红本子，盖着钢印，封面写着结婚证。
+      </h4>
+      <div class="box-2">3</div>
+    </div>
+
+     <div class="box-big box-big-4">
+      <h4 class="box-1">
+        以后每年一起去一个地方，留下我们两个人的脚印。其实最重要的是希望我们都健康白头到老，然后坐在摇椅上回忆我们的爱情故事。
+      </h4>
+      <div class="box-2">4</div>
+    </div>
   </div>
+  <script src="js/jquery-1.10.1.min.js"></script>  
+  <script>
+    $('.box-big-1').hover(function(){
+      $('.box-big-1 .box-2').animate({top:'-300px'},500)
+    },function(){
+       $('.box-big-1 .box-2').animate({top:'0px'},500)
+    })
 
-  <div class="box-big box-big-2">
-    <h4 class="box-1">
-      今天是2017年2月14日情人节，今天抽奖本想抽到一个回家送你，结果宝宝幸运的抽到null
-    </h4>
-    <div class="box-2">2</div>
-  </div>
+    $('.box-big-2').hover(function(){
+      $('.box-big-2 .box-2').animate({bottom:'-300px'},500)
+    },function(){
+       $('.box-big-2 .box-2').animate({bottom:'0px'},500)
+    })
 
-  <div class="box-big box-big-3">
-    <h4 class="box-1">
-      许下一个愿望，希望明年有属于我们的家。拿到一个红本子，盖着钢印，封面写着结婚证。
-    </h4>
-    <div class="box-2">3</div>
-  </div>
+    $('.box-big-3').hover(function(){
+      $('.box-big-3 .box-2').animate({left:'-300px'},500)
+    },function(){
+       $('.box-big-3 .box-2').animate({left:'0px'},500)
+    })
 
-   <div class="box-big box-big-4">
-    <h4 class="box-1">
-      以后每年一起去一个地方，留下我们两个人的脚印。其实最重要的是希望我们都健康白头到老，然后坐在摇椅上回忆我们的爱情故事。
-    </h4>
-    <div class="box-2">4</div>
-  </div>
+    $('.box-big-4').hover(function(){
+      $('.box-big-4 .box-2').animate({right:'-300px'},500)
+    },function(){
+       $('.box-big-4 .box-2').animate({right:'0px'},500)
+    })
 
-
-<script src="js/jquery-1.10.1.min.js"></script>  
-<script>
-  $('.box-big-1').hover(function(){
-    $('.box-big-1 .box-2').animate({top:'-300px'},500)
-  },function(){
-     $('.box-big-1 .box-2').animate({top:'0px'},500)
-  })
-
-  $('.box-big-2').hover(function(){
-    $('.box-big-2 .box-2').animate({bottom:'-300px'},500)
-  },function(){
-     $('.box-big-2 .box-2').animate({bottom:'0px'},500)
-  })
-
-  $('.box-big-3').hover(function(){
-    $('.box-big-3 .box-2').animate({left:'-300px'},500)
-  },function(){
-     $('.box-big-3 .box-2').animate({left:'0px'},500)
-  })
-
-  $('.box-big-4').hover(function(){
-    $('.box-big-4 .box-2').animate({right:'-300px'},500)
-  },function(){
-     $('.box-big-4 .box-2').animate({right:'0px'},500)
-  })
-
-</script>
+  </script>
 </body>
 </html>
